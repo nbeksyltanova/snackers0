@@ -1,0 +1,23 @@
+.purchase {
+  text-align: center;
+
+  &__title h2 {
+    width: 210px;
+    top: 255px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    padding-left: 145px;
+    color: #000000;
+  }
+  &__title img {
+    position: relative;
+    left: -34em;
+    top: 2.6em;
+    padding-left: 136px;
+  }
+  &__menu {
+    display: flex;
+  }
+}

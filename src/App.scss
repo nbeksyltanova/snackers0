@@ -1,0 +1,53 @@
+@import "./sass/_vars";
+@import "./sass/fonts";
+@import "./sass/normalithe";
+@import "./sass/conponens.scss/header";
+@import "./sass/conponens.scss/_stan";
+@import "./sass/conponens.scss/_purchase";
+// MENU
+@import "./sass/conponens.scss/_our";
+@import "./sass/MainMenu.scss/menu";
+@import "./sass/MainMenu.scss/menu2";
+@import "./sass/MainMenu.scss/menu3";
+@import "./sass/MainMenu.scss/menu4";
+@import "./sass/MainMenu.scss/menu5";
+@import "./sass/MainMenu.scss/menu6";
+@import "./sass/MainMenu.scss/menu7";
+@import "./sass/MainMenu.scss/menu8";
+@import "./sass/MainMenu.scss/menu9";
+@import "./sass/MainMenu.scss/menu10";
+@import "./sass/MainMenu.scss/menu11";
+@import "./sass/MainMenu.scss/menu12";
+
+.App {
+  background-color: $main-color;
+  padding-top: 85px;
+  &__back {
+    width: 1020px;
+    background-color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 43px;
+    border-radius: 20px;
+    padding-right: 63px;
+    padding-left: 45px;
+    padding-bottom: 44px;
+  }
+  &__menu-sne {
+    display: flex;
+    margin-left: -2em;
+    justify-content: center;
+  }
+  &__purchase {
+    background-color: $white;
+    width: 1020px;
+    background-color: $white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 43px;
+    border-radius: 20px;
+    padding-right: 63px;
+    padding-left: 45px;
+    padding-bottom: 44px;
+  }
+}

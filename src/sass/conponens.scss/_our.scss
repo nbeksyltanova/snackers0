@@ -1,0 +1,36 @@
+@import "../vars";
+.our {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      position: relative;
+      right: 17.3em;
+      z-index: 1;
+      top: 0.1em;
+    }
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-left: 1em;
+    }
+  }
+}
+input {
+  padding-left: 46px;
+  padding-right: -6px;
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 280px;
+  height: 45px;
+  left: 955px;
+  top: 695px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+}
