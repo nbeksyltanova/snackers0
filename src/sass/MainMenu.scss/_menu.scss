@@ -1,17 +1,25 @@
 .menu {
   //
-
+  .tab {
+    cursor: pointer;
+    padding-top: 0.2em;
+  }
   &__container {
     /* Rectangle 19 */
 
     width: 210px;
-    height: 260px;
+    height: 276px;
 
     background: #ffffff;
-    border: 1px solid #f3f3f3;
+    border: 1px solid #d4c6c6;
     border-radius: 40px;
     margin-top: 40px;
-    margin-left: 60px;
+    margin-left: 46px;
+    margin-bottom: 3em;
+    &:hover {
+      box-shadow: 0px 20px 35px rgb(122, 155, 159);
+      transform: translateY(-5px);
+    }
   }
   &__hard {
     padding-top: 22px;
@@ -26,8 +34,6 @@
     margin-top: -3em;
   }
   &__title h2 {
-    /* Мужские Кроссовки Nike Blazer Mid Suede */
-
     width: 150px;
     height: 34px;
     padding-left: 31px;
@@ -45,10 +51,10 @@
     display: flex;
     justify-content: space-between;
     padding-left: 32px;
-
+    .plus {
+      cursor: pointer;
+    }
     h2 {
-      /* Цена: */
-
       width: 35px;
       height: 13px;
       font-style: normal;

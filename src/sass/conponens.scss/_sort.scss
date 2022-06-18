@@ -1,0 +1,59 @@
+.sort {
+  position: relative;
+  padding-bottom: 9em;
+  &__label {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 8px;
+      transform: rotate(90deg);
+      &.sort-icon--active {
+        transform: rotate(-180deg);
+      }
+      path {
+        fill: rgb(49, 108, 1);
+      }
+    }
+
+    b {
+      margin-right: 8px;
+    }
+
+    span {
+      color: rgb(12, 14, 149);
+      border-bottom: 2px dashed darkgreen;
+      cursor: pointer;
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    left: 149px;
+    margin-top: 15px;
+    background: #fefefe;
+    box-shadow: 0px 5px 15px rgba(241, 227, 227, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 20px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: rgba(10, 5, 67, 0.05);
+        }
+
+        &.active {
+          font-weight: bold;
+          color: rgb(20, 12, 99);
+        }
+      }
+    }
+  }
+}

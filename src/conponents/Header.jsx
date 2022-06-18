@@ -3,6 +3,7 @@ import Lodo from "../asseta/img/Logo.png";
 import Cart from "../asseta/img/cart.svg";
 import Hard from "../asseta/img/hart.png";
 import User from "../asseta/img/user.svg";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -12,7 +13,10 @@ const Header = () => {
           <div className="header__inner">
             <div className="header__sneak">
               <div className="header__logo">
-                <img src={Lodo} />
+                <NavLink to="">
+                  {" "}
+                  <img src={Lodo} />
+                </NavLink>
               </div>
 
               <div className="header__title">
@@ -23,12 +27,14 @@ const Header = () => {
             {/*  */}
             <div className="header__ligh">
               <p>
-                <img
-                  className="header__cart"
-                  src={Cart}
-                  width={20}
-                  height={18.27}
-                />
+                <NavLink to="/Corzina">
+                  <img
+                    className="header__cart"
+                    src={Cart}
+                    width={20}
+                    height={18.27}
+                  />
+                </NavLink>
                 <span>1205 pyб.</span>
               </p>
 
@@ -38,12 +44,15 @@ const Header = () => {
               </p>
               <p>
                 {" "}
-                <img
-                  className="header__icon"
-                  src={User}
-                  width={20}
-                  height={20}
-                />
+                <NavLink to="/Purchase">
+                  {" "}
+                  <img
+                    className="header__icon"
+                    src={User}
+                    width={20}
+                    height={20}
+                  />
+                </NavLink>
               </p>
             </div>
           </div>

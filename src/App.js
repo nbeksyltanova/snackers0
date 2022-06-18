@@ -1,56 +1,65 @@
 import "./App.scss";
 import Header from "./conponents/Header";
-import Stan from "./conponents/Stan";
-import Our from "./conponents/Our";
 
-// Menu
-import Menu from "./MainMenu/Menu";
-import Menu2 from "./MainMenu/Menu2";
-import Menu3 from "./MainMenu/Menu3";
-import Menu4 from "./MainMenu/Menu4";
-import Menu5 from "./MainMenu/Menu5";
-import Menu6 from "./MainMenu/Menu6";
-import Menu7 from "./MainMenu/Menu7";
-import Menu8 from "./MainMenu/Menu8";
-import Menu9 from "./MainMenu/Menu9";
-import Menu10 from "./MainMenu/Menu10";
-import Menu11 from "./MainMenu/Menu11";
-import Menu12 from "./MainMenu/Menu12";
-
-//PURCHASE
-import Purchase from "./Market/Purchase";
+import Home from "./pages/Home";
+import SneakerPages from "./pages/SneakerPages";
+import PurchasePages from "./pages/PurchasePages";
+import { Route, Routes } from "react-router-dom";
+import CartPages from "./pages/CartPages";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [data, setData] = useState([]);
+  // Поиск
+  const [text, setText] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      const resp = await fetch("/db.json");
+      const data = await resp.json();
+      console.log(data);
+      setData(data);
+    }
+    fetchData();
+  }, []);
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const resp = await fetch("/bd.json");
+      const user = await resp.json();
+      setUser(user);
+    }
+    fetchData();
+  }, []);
+
+  // Поиск
+
+  const searchData = data.filter((item) =>
+    item.name.toLowerCase().includes(text.toLowerCase())
+  );
   return (
     <div className="App">
       <div className="App__back">
         <Header />
-        <Stan />
-        <Our />
         <div className="App__menu-sne">
-          {" "}
-          <Menu />
-          <Menu2 />
-          <Menu3 />
-          <Menu4 />
-        </div>
-        <div className="App__menu-sne">
-          <Menu5 />
-          <Menu6 />
-          <Menu7 />
-          <Menu8 />
-        </div>
-        <div className="App__menu-sne">
-          <Menu9 />
-          <Menu10 />
-          <Menu11 />
-          <Menu12 />
+          <Routes>
+            <Route
+              path="/"
+              element={<Home data={searchData} text={text} setText={setText} />}
+            />
+            <Route path="/Sneakers" element={<SneakerPages data={data} />} />
+            <Route path="/Purchase" element={<PurchasePages user={user} />} />
+            <Route path="/Corzina" element={<CartPages />} />
+          </Routes>
         </div>
       </div>
-      <div className="App__menu-sne  App__purchase">
-        {" "}
-        <Purchase />
-      </div>
+      //Пример
+      {/* {data.map((item) => (
+        <div>
+          <img scr={item.image} />
+          <h2>{item.name}</h2>
+          <h3>Цена:{item.price}</h3>
+        </div>
+      ))} */}
     </div>
   );
 }

@@ -9,7 +9,7 @@ const Our = () => {
             <h2>Все кроссовки</h2>
             <p>
               <img src={Search} alt={Search} width={17.25} />
-              <input type="text" placeholder="Поиск" />
+              <input type="text" placeholder="Поиск" onChange={e=>setValue(e.tar)} />
             </p>
           </div>
         </div>

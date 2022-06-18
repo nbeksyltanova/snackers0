@@ -9,9 +9,9 @@
     margin-right: auto;
     img {
       position: relative;
-      right: 17.3em;
+      right: -0.3em;
       z-index: 1;
-      top: 0.1em;
+      top: 0.6em;
     }
     h2 {
       font-size: 32px;
@@ -25,12 +25,24 @@ input {
   padding-right: -6px;
   box-sizing: border-box;
 
-  position: absolute;
+  position: relative;
   width: 280px;
   height: 45px;
-  left: 955px;
-  top: 695px;
+  left: -35px;
+  top: 5px;
 
-  border: 1px solid #f3f3f3;
+  border: 1px solid #f4dbdb;
   border-radius: 10px;
+  transition: all 0.3s;
+  &:focus {
+    color: red;
+    transition: all 0.3s;
+
+    background-color: rgb(170, 239, 106);
+
+    &:hover {
+      transform: translateX(-2px);
+      transition: all 0.3s;
+    }
+  }
 }

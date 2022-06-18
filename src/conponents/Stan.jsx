@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Adidas from "../asseta/img/adidas.png";
 import Fov from "../asseta/img/forever.png";
 import Slider from "../asseta/img/sliderpng.png";
@@ -14,8 +15,9 @@ const Stan = () => {
               Stan Smith<span>,</span>
               <p>Forever!</p>
             </h1>
-
-            <button>Купить</button>
+            <NavLink to="/Sneakers">
+              <button>Купить</button>
+            </NavLink>
           </div>
           <div className="stan__rait">
             <img className="stan__img" src={Fov} height={300} />

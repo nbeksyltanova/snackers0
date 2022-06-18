@@ -65,6 +65,11 @@
       cursor: pointer;
       font-size: 16px;
       color: #ffff;
+      transition: all 0.3s;
+      &:hover {
+        background-color: rgb(108, 95, 212);
+        transition: all 0.3s;
+      }
     }
   }
 }

@@ -4,21 +4,11 @@
 @import "./sass/conponens.scss/header";
 @import "./sass/conponens.scss/_stan";
 @import "./sass/conponens.scss/_purchase";
-// MENU
+@import "./sass/conponens.scss/cart";
+@import "./sass/conponens.scss/kross";
 @import "./sass/conponens.scss/_our";
-@import "./sass/MainMenu.scss/menu";
-@import "./sass/MainMenu.scss/menu2";
-@import "./sass/MainMenu.scss/menu3";
-@import "./sass/MainMenu.scss/menu4";
-@import "./sass/MainMenu.scss/menu5";
-@import "./sass/MainMenu.scss/menu6";
-@import "./sass/MainMenu.scss/menu7";
-@import "./sass/MainMenu.scss/menu8";
-@import "./sass/MainMenu.scss/menu9";
-@import "./sass/MainMenu.scss/menu10";
-@import "./sass/MainMenu.scss/menu11";
-@import "./sass/MainMenu.scss/menu12";
-
+@import "./sass/conponens.scss/sort";
+@import "./sass/MainMenu.scss/menu"; // MENU
 .App {
   background-color: $main-color;
   padding-top: 85px;
@@ -49,5 +39,16 @@
     padding-right: 63px;
     padding-left: 45px;
     padding-bottom: 44px;
+  }
+  // &__kross {
+  //   display: grid;
+  //   grid-template-columns: 100px 100px 100px 100px;
+  //   padding-right: 10rem;
+  //   grid-gap: 10em;
+  //   grid-template-rows: 150px 150px;
+  //   justify-content: space-around;
+  // }
+  &__sh {
+    display: flex;
   }
 }
